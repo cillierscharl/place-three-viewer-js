@@ -5,7 +5,7 @@ define(["require", "exports", "utilities", "threeapp"], function (require, expor
             var _this = this;
             this.LoadBitmap = function () {
                 var _context = _this;
-                var myRequest = new Request('http://localhost:3000/getbitmap');
+                var myRequest = new Request('getbitmap');
                 fetch(myRequest).then(function (response) {
                     var arrayBuffer = response.arrayBuffer();
                     arrayBuffer.then(function (buf) {
