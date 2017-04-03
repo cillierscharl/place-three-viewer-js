@@ -17,7 +17,13 @@ gulp.task('content', function () {
 });
 
 gulp.task('libs', function () {
-    return gulp.src(['node_modules/three/build/three.min.js', 'Scripts/trackballcontrols.js', 'node_modules/requirejs/require.js'], { base: "." })
+    return gulp.src([
+        'node_modules/three/build/three.min.js',
+        'Scripts/trackballcontrols.js',
+        'node_modules/requirejs/require.js',
+        'node_modules/whatwg-fetch/fetch.js',
+        'node_modules/promise-polyfill/promise.min.js'
+    ], { base: "." })
         .pipe(concat('lib.js'))
         .pipe(gulp.dest('./dist'));
 });
