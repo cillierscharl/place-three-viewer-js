@@ -1,6 +1,5 @@
-﻿import three = require("three");
-import { BitMapHelpers } from "App/utilities";
-import { ThreeApp } from "App/threeapp";
+﻿import { BitMapHelpers } from "utilities";
+import { ThreeApp } from "threeapp";
 
 class Index {
     constructor() {

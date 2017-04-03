@@ -1,0 +1,9 @@
+{
+  "globalDependencies": {
+    "node": "registry:dt/node#7.0.0+20170322231424"
+  },
+  "dependencies": {
+    "request": "registry:npm/request#2.69.0+20160428223725",
+    "ws": "registry:dt/ws#0.0.0+20170307231658"
+  }
+}

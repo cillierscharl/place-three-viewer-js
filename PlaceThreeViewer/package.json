@@ -2,8 +2,9 @@
   "name": "place-d3-viewer",
   "version": "1.0.0",
   "description": "View /r/place maps in D3",
-  "main": "app.js",
+  "main": "Server/app.js",
   "scripts": {
+    "start": "node ../PlaceThreeServer/app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -12,7 +13,7 @@
   },
   "keywords": [
     "/r/place",
-    "d3"
+    "Threejs"
   ],
   "author": "Charl Cilliers",
   "license": "ISC",
@@ -24,5 +25,10 @@
     "requirejs": "^2.3.3",
     "three": "^0.84.0",
     "typings": "^2.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-requirejs-optimize": "^1.2.0"
   }
 }

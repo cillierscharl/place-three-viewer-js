@@ -1,6 +1,8 @@
 (function () {
     requirejs.config({
-        paths: {},
+        paths: {
+            three: './node_modules/three/build/node_modules/three/build/three.min'
+        },
         bundles: {}
     });
     require(["App/index"]);

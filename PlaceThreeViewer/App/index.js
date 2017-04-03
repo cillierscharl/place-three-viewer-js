@@ -1,4 +1,4 @@
-define(["require", "exports", "App/utilities", "App/threeapp"], function (require, exports, utilities_1, threeapp_1) {
+define(["require", "exports", "utilities", "threeapp"], function (require, exports, utilities_1, threeapp_1) {
     "use strict";
     var Index = (function () {
         function Index() {
