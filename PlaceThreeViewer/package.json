@@ -1,0 +1,28 @@
+{
+  "name": "place-d3-viewer",
+  "version": "1.0.0",
+  "description": "View /r/place maps in D3",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/f0xy/place-d3-viewer.git"
+  },
+  "keywords": [
+    "/r/place",
+    "d3"
+  ],
+  "author": "Charl Cilliers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/f0xy/place-d3-viewer/issues"
+  },
+  "homepage": "https://github.com/f0xy/place-d3-viewer#readme",
+  "dependencies": {
+    "requirejs": "^2.3.3",
+    "three": "^0.84.0",
+    "typings": "^2.1.0"
+  }
+}
