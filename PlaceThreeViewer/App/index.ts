@@ -8,7 +8,7 @@ class Index {
 
     LoadBitmap = () => {
         var _context = this;
-        var myRequest = new Request('getbitmap');
+        var myRequest = new Request('http://localhost:3000/getbitmap');
 
         fetch(myRequest).then(function (response) {
             var arrayBuffer = response.arrayBuffer();
