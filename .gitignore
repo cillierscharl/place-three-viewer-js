@@ -1,3 +1,5 @@
+app.js
+App/*.js
 dist
 Content/Styles/*.css
 *.min.css
