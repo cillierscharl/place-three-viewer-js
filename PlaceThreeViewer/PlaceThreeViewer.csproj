@@ -36,6 +36,8 @@
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
     <TypeScriptCompile Include="App\index.ts" />
+    <TypeScriptCompile Include="App\threeapp.ts" />
+    <TypeScriptCompile Include="App\utilities.ts" />
     <TypeScriptCompile Include="typings\globals\requirejs\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\three\index.d.ts" />
     <TypeScriptCompile Include="typings\index.d.ts" />
@@ -50,7 +52,6 @@
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
     <Content Include="typings\globals\three\typings.json" />
-    <Content Include="Content\bitmap.map" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

@@ -1,4 +1,6 @@
-
+Content/Styles/*.css
+*.min.css
+*.css
 *.js.map
 node_modules/
 built/*
@@ -398,3 +400,4 @@ __pycache__/
 *.odx.cs
 *.xsd.cs
 PlaceThreeViewer/Content/bitmap.map
+*.css
