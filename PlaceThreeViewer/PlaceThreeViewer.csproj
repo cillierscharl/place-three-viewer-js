@@ -10,18 +10,20 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
-    <TypeScriptToolsVersion>2.2</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>3.8</TypeScriptToolsVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\three.js" />
     <Content Include="Content\Styles\app.css">
       <DependentUpon>app.scss</DependentUpon>
     </Content>
@@ -31,19 +33,14 @@
     <Content Include="gulpfile.js" />
     <Content Include="index.html" />
     <Content Include="Scripts\trackballcontrols.js" />
-    <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="App\app.ts" />
     <TypeScriptCompile Include="App\index.ts" />
     <TypeScriptCompile Include="App\threeapp.ts" />
     <TypeScriptCompile Include="App\utilities.ts" />
-    <TypeScriptCompile Include="typings\globals\requirejs\index.d.ts" />
-    <TypeScriptCompile Include="typings\globals\three\index.d.ts" />
-    <TypeScriptCompile Include="typings\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="typings\globals\requirejs\typings.json" />
     <Content Include="package.json" />
     <Content Include="typings.json" />
     <Content Include="Content\Styles\app.scss" />
@@ -51,7 +48,7 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
-    <Content Include="typings\globals\three\typings.json" />
+    <Content Include="web.config" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

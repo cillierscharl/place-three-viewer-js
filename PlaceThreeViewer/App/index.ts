@@ -8,7 +8,7 @@ class Index {
 
     LoadBitmap = () => {
         var _context = this;
-        var myRequest = new Request('http://localhost:3000/place.bmp');
+        var myRequest = new Request('Content/place.png');
 
         fetch(myRequest).then(function (response) {
             var arrayBuffer = response.arrayBuffer();

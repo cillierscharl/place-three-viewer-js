@@ -1,4 +1,8 @@
-﻿export class ThreeApp {
+﻿/// <reference path="../node_modules/@types/three/index.d.ts" />
+
+import THREE = require("three");
+
+export class ThreeApp {
     constructor() { }
 
     public initialize(data: Uint8Array) {
@@ -14,21 +18,21 @@
         renderer.setSize(window.innerWidth, window.innerHeight);
         document.body.appendChild(renderer.domElement);
 
-        var controls = new (<any>THREE).TrackballControls(camera);
+        //var controls = new (<any>THREE).TrackballControls(camera);
 
-        controls.rotateSpeed = 1.0;
-        controls.zoomSpeed = 2;
-        controls.panSpeed = 1.2;
+        //controls.rotateSpeed = 1.0;
+        //controls.zoomSpeed = 2;
+        //controls.panSpeed = 1.2;
 
-        controls.noZoom = false;
-        controls.noPan = false;
+        //controls.noZoom = false;
+        //controls.noPan = false;
 
-        controls.staticMoving = true;
-        controls.dynamicDampingFactor = 0.3;
+        //controls.staticMoving = true;
+        //controls.dynamicDampingFactor = 0.3;
 
-        controls.keys = [65, 83, 68];
+        //controls.keys = [65, 83, 68];
 
-        controls.addEventListener('change', render);
+        //controls.addEventListener('change', render);
 
         var geometry = new THREE.Geometry();
         var materials = [];
@@ -75,7 +79,7 @@
 
         function animate() {
             requestAnimationFrame(animate);
-            controls.update();
+            //controls.update();
         }
         function render() {
             renderer.render(scene, camera);
