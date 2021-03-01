@@ -24,7 +24,7 @@
   "dependencies": {
     "promise-polyfill": "^6.0.2",
     "requirejs": "^2.3.3",
-    "three": "^0.84.0",
+    "three": "^0.125.0",
     "@types/three": "^0.84.0",
     "@types/requirejs": "2.1.26",
     "typings": "^2.1.0",
