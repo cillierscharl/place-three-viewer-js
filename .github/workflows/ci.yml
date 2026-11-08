@@ -6,7 +6,8 @@ on:
   pull_request:
 
 jobs:
-  build:
+  # Required status check on master (branch protection), so keep this job id stable.
+  ci:
     runs-on: ubuntu-latest
 
     steps:

@@ -50,6 +50,10 @@ Open the URL Vite prints (http://localhost:5173 by default).
 
 Every push to `master` builds the site and publishes it to GitHub Pages (see [`.github/workflows/pages.yml`](.github/workflows/pages.yml)). The build uses relative paths, so `dist/` also works from any static host or sub-path.
 
+## Staying up to date
+
+Dependabot opens grouped PRs monthly for npm packages and GitHub Actions ([`.github/dependabot.yml`](.github/dependabot.yml)). Minor and patch updates to the dev tooling and Actions merge themselves once CI passes. Major updates and three.js bumps wait for a human, because three.js can break its API in any release.
+
 ## History
 
 Built in April 2017, right after r/place ended, as a Visual Studio 2017 TypeScript project with RequireJS, gulp 3 and a vendored copy of three.js. It quietly stopped working once three.js dropped `THREE.Geometry`, and the azurewebsites demo went with it. In 2026 it was brought back from the dead for fun and posterity: same snapshot, same idea, modern tooling.

@@ -1,0 +1,25 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      # three and its types must move together. Not auto-merged; see dependabot-auto-merge.yml.
+      three:
+        patterns: ["three", "@types/three"]
+      # Build and test tooling (vite, vitest, typescript, ...) in one PR.
+      dev-dependencies:
+        dependency-type: development
+    ignore:
+      # Stay on the Node 24 types to match CI.
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      actions:
+        patterns: ["*"]
