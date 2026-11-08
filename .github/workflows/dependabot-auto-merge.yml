@@ -1,0 +1,28 @@
+name: Dependabot auto-merge
+
+on: pull_request
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  auto-merge:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
+
+    steps:
+      - id: metadata
+        uses: dependabot/fetch-metadata@v3
+
+      # Merges once the required CI check passes. Majors wait for a human, and so
+      # does three.js: its "minor" 0.x releases routinely break APIs (r125 removing
+      # THREE.Geometry is what broke this viewer the first time round).
+      - name: Enable auto-merge
+        if: >-
+          steps.metadata.outputs.update-type != 'version-update:semver-major' &&
+          !contains(steps.metadata.outputs.dependency-names, 'three')
+        run: gh pr merge --auto --merge "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
