@@ -1,0 +1,92 @@
+:root {
+  color-scheme: dark;
+  font: 14px/1.4 system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color: #e6e6e6;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #111111;
+}
+
+canvas {
+  display: block;
+  touch-action: none;
+}
+
+.overlay {
+  position: fixed;
+  margin: 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgb(0 0 0 / 0.6);
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+}
+
+.overlay a {
+  color: inherit;
+  pointer-events: auto;
+}
+
+header {
+  top: 16px;
+  left: 16px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+#snapshot {
+  margin: 2px 0 0;
+  color: #a8a8a8;
+  font-size: 13px;
+}
+
+#snapshot:empty {
+  display: none;
+}
+
+#status {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: calc(100% - 32px);
+  box-sizing: border-box;
+}
+
+#status.error {
+  color: #ff8a80;
+}
+
+footer {
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 16px;
+  color: #a8a8a8;
+  font-size: 13px;
+}
+
+.hint-touch {
+  display: none;
+}
+
+@media (pointer: coarse) {
+  .hint-mouse {
+    display: none;
+  }
+
+  .hint-touch {
+    display: inline;
+  }
+}
